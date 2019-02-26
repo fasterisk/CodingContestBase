@@ -30,3 +30,18 @@
 *.exe
 *.out
 *.app
+
+# Visual studio files
+*.ipch
+*.db
+*.opendb
+*.suo
+*.tlog
+*.ilk
+*.pdb
+*.user
+*.idb
+*.log
+
+# contest files
+level*
