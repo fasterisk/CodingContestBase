@@ -1,5 +1,6 @@
 #include "Contest.h"
 
+
 struct INPUTSTRUCT
 {
 	int iRows;

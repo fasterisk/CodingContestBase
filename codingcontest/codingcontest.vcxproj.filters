@@ -18,6 +18,9 @@
     <ClInclude Include="Contest.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="CommonIncludes.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

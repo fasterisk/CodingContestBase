@@ -1,12 +1,6 @@
 #pragma once
 
-#include <fstream>
-#include <string>
-#include <vector>
-#include <cassert>
-#include <sstream>
-#include <istream>
-#include <ostream>
+#include "CommonIncludes.h"
 
 class Contest
 {

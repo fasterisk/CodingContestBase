@@ -7,13 +7,13 @@
 #include <vector>
 #include "Contest.h"
 
-std::string FOLDER_PREFIX = "level";
-
-unsigned int LEVEL_NUMBER = 1;
-unsigned int NUM_TEST_LEVELS = 4;
-
 int main()
 {
+	std::string FOLDER_PREFIX = "level";
+
+	unsigned int LEVEL_NUMBER = 1;
+	unsigned int NUM_TEST_LEVELS = 4;
+
 	for (unsigned int nLevelFile = 0; nLevelFile < NUM_TEST_LEVELS; ++nLevelFile)
 	{
 		std::ostringstream ssInputFileName, ssOutputFileName;
