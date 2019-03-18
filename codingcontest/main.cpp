@@ -9,6 +9,8 @@
 
 int main()
 {
+
+
 	std::string FOLDER_PREFIX = "level";
 
 	unsigned int LEVEL_NUMBER = 1;
@@ -33,19 +35,7 @@ int main()
 		assert(output.is_open());
 
 		Contest contest;
-
-		switch (LEVEL_NUMBER)
-		{
-		case 1: contest.Level1(input, output); break;
-		case 2: contest.Level2(input, output); break;
-		case 3: contest.Level3(input, output); break;
-		case 4: contest.Level4(input, output); break;
-		case 5: contest.Level5(input, output); break;
-		case 6: contest.Level6(input, output); break;
-		case 7: contest.Level7(input, output); break;
-		default:
-			break;
-		}
+		contest.Run(input, output);
 
 		output.flush();
 		input.close();

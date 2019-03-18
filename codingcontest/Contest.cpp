@@ -3,63 +3,40 @@
 
 struct INPUTSTRUCT
 {
-	int iRows;
-	int iColumns;
-
-	void read(std::ifstream & input)
-	{
-		input >> iRows >> iColumns;
-	}
+	pair<uint, uint> info;
 };
 
+ofstream &operator <<(ofstream & output, const INPUTSTRUCT & rStruct)
+{
+	output << rStruct.info << endl;
+	return output;
+}
+
+ifstream &operator >> (ifstream & input, INPUTSTRUCT & rStruct)
+{
+	input >> rStruct.info;
+
+	return input;
+}
+
 /***********************************************************************************
 ************************************************************************************/
-void	Contest::Level1(std::ifstream & input, std::ofstream & output)
+void	Contest::Run(std::ifstream & input, std::ofstream & output)
 {
 	INPUTSTRUCT stInputStruct;
-	stInputStruct.read(input);
 
-	output << stInputStruct.iRows << " # " << stInputStruct.iColumns;
-}
+	input >> stInputStruct;
+	output << stInputStruct;
 
-/***********************************************************************************
-************************************************************************************/
-void	Contest::Level2(std::ifstream & input, std::ofstream & output)
-{
+	VI vi = { 1, 2, 3, 4, 5, 6, 7, 8 };
+	SI si = { 1, 2, 3,4 ,6, 7 };
 
-}
+	MII mii;
+	mii[0] = 123;
+	mii[2] = 23322;
+	mii[5] = 23923;
 
-/***********************************************************************************
-************************************************************************************/
-void	Contest::Level3(std::ifstream & input, std::ofstream & output)
-{
-
-}
-
-/***********************************************************************************
-************************************************************************************/
-void	Contest::Level4(std::ifstream & input, std::ofstream & output)
-{
-
-}
-
-/***********************************************************************************
-************************************************************************************/
-void	Contest::Level5(std::ifstream & input, std::ofstream & output)
-{
-
-}
-
-/***********************************************************************************
-************************************************************************************/
-void	Contest::Level6(std::ifstream & input, std::ofstream & output)
-{
-
-}
-
-/***********************************************************************************
-************************************************************************************/
-void	Contest::Level7(std::ifstream & input, std::ofstream & output)
-{
-
+	output << vi << endl;
+	output << si << endl;
+	output << mii << endl;
 }
