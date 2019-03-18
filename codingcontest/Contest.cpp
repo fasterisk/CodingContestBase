@@ -3,19 +3,15 @@
 
 struct INPUTSTRUCT
 {
-	pair<uint, uint> info;
 };
 
 ofstream &operator <<(ofstream & output, const INPUTSTRUCT & rStruct)
 {
-	output << rStruct.info << endl;
 	return output;
 }
 
 ifstream &operator >> (ifstream & input, INPUTSTRUCT & rStruct)
 {
-	input >> rStruct.info;
-
 	return input;
 }
 
@@ -28,8 +24,19 @@ void	Contest::Run(std::ifstream & input, std::ofstream & output)
 	input >> stInputStruct;
 	output << stInputStruct;
 
-	VI vi = { 1, 2, 3, 4, 5, 6, 7, 8 };
+	// lambda
+	auto add = [](int i, int j) -> int { return i + j;  };
+
+	int a = add(10, 20);
+	int b = add(100, 200);
+
+	output << a << " " << b << endl;
+
+	VI vi;
+	fillVector(vi, 123, 5);
+
 	SI si = { 1, 2, 3,4 ,6, 7 };
+	
 
 	MII mii;
 	mii[0] = 123;

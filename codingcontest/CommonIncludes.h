@@ -36,7 +36,7 @@ template<typename T, typename U> inline void amax(T &x, U y) { if (x < y) x = y;
 template<typename T1, typename T2>
 inline ofstream& operator << (ofstream & output, const pair<T1, T2>& p)
 {
-	output << "(" << p.first << ", " << p.second << ")";
+	output << p.first << " " << p.second;
 
 	return output;
 }
@@ -101,7 +101,8 @@ inline ofstream &operator <<(ofstream & output, const map<T1, T2> & rMap)
 	return output;
 }
 
-template<typename T> inline void readVector(ifstream & input, int iNum, vector<T> & rVector)
+template<typename T>
+inline void readVector(ifstream & input, int iNum, vector<T> & rVector)
 {
 	for (int i = 0; i < iNum; ++i)
 	{
@@ -112,7 +113,8 @@ template<typename T> inline void readVector(ifstream & input, int iNum, vector<T
 	}
 }
 
-template<typename T> inline void readSet(ifstream & input, int iNum, set<T> & rSet)
+template<typename T>
+inline void readSet(ifstream & input, int iNum, set<T> & rSet)
 {
 	for (int i = 0; i < iNum; ++i)
 	{
@@ -122,3 +124,26 @@ template<typename T> inline void readSet(ifstream & input, int iNum, set<T> & rS
 		rSet.insert(item);
 	}
 }
+
+template<typename T1, typename T2>
+inline void readMap(ifstream & input, int iNum, map<T1, T2> & rMap)
+{
+	for (int i = 0; i < iNum; ++i)
+	{
+		T1 t1;
+		input >> t1;
+		T2 t2;
+		input >> t2;
+
+		rMap[t1] = t2;
+	}
+}
+
+template<typename T>
+inline void fillVector(vector<T> & rVec, T item, int iNum)
+{
+	for (int i = 0; i < iNum; ++i)
+		rVec.push_back(item);
+}
+
+inline int roundToInt(double d) { return int(d + 0.5); }
