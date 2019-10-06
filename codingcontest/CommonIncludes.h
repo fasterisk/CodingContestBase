@@ -9,6 +9,8 @@
 #include <sstream>
 #include <istream>
 #include <ostream>
+#include <unordered_set>
+#include <algorithm>
 
 using namespace std;
 
@@ -17,9 +19,11 @@ typedef unsigned int uint;
 
 // Pairs
 typedef pair<int, int> PI;
+typedef pair<double, double> PD;
 
 // Vectors
 typedef vector<int> VI;
+typedef vector<double> VD;
 typedef vector<string> VS;
 typedef vector<PI> VII;
 
@@ -29,6 +33,9 @@ typedef set<int> SI;
 // Maps
 typedef map<int, int> MII;
 typedef map<string, int> MSI;
+
+constexpr int MAXINT = std::numeric_limits<int>::max();
+constexpr int MININT = -MAXINT;
 
 template<typename T, typename U> inline void amin(T &x, U y) { if (y < x) x = y; }
 template<typename T, typename U> inline void amax(T &x, U y) { if (x < y) x = y; }

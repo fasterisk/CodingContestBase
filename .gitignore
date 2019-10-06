@@ -42,6 +42,10 @@
 *.user
 *.idb
 *.log
+*.iobj
+*.ipdb
 
 # contest files
 level*
+*.zip
+*.pdf
