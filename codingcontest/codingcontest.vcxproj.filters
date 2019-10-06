@@ -10,5 +10,8 @@
     <ClInclude Include="CommonIncludes.h">
       <Filter>headers</Filter>
     </ClInclude>
+    <ClInclude Include="Direction.h">
+      <Filter>headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

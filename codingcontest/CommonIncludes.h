@@ -154,3 +154,15 @@ inline void fillVector(vector<T> & rVec, T item, int iNum)
 }
 
 inline int roundToInt(double d) { return int(d + 0.5); }
+
+inline void goToNextLine(ifstream & input)
+{
+	char nextChar;
+	while (input.get(nextChar))
+	{
+		if (nextChar == '\n')
+		{
+			break;
+		}
+	}
+}
