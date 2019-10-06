@@ -1,16 +1,10 @@
-// codingcontest.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
+#pragma once
 
-#include <iostream>
-#include <fstream>
-#include <cassert>
-#include <vector>
+#include "CodingContest.h"
 #include "Contest.h"
 
 int main()
 {
-
-
 	std::string FOLDER_PREFIX = "level";
 
 	unsigned int LEVEL_NUMBER = 5;

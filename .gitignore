@@ -44,6 +44,8 @@
 *.log
 *.iobj
 *.ipdb
+*.db-shm
+*.db-wal
 
 # contest files
 level*

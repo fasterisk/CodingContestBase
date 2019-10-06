@@ -8,8 +8,6 @@ enum TDirection
 	UP
 };
 
-
-
 struct Command
 {
 	string type;
