@@ -18,4 +18,5 @@ ifstream &operator >> (ifstream & input, InputObject & rA)
 ************************************************************************************/
 void Contest::Run(std::ifstream & input, std::ofstream & output)
 {
+	
 }

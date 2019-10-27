@@ -45,3 +45,21 @@ inline void fillVector(vector<T> & rVec, T item, int iNum)
 
 inline int roundToInt(double d) { return int(d + 0.5); }
 
+
+template<typename K, typename V>
+inline vector<K> extractKeys(const map<K,V> & rvMap)
+{
+	auto v = vector<K>{};
+	transform(rvMap.begin(), rvMap.end(), back_inserter(v), [](auto& iter) { return iter.first; });
+
+	return v;
+}
+
+template<typename K, typename V>
+inline vector<K> extractValues(const map<K, V>& rvMap)
+{
+	auto v = vector<K>{};
+	transform(rvMap.begin(), rvMap.end(), back_inserter(v), [](auto& iter) { return iter.second; });
+
+	return v;
+}

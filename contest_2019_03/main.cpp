@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CodingContest.h"
+#include "CodingContestBase.h"
 #include "Contest.h"
 
 int main()

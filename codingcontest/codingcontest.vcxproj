@@ -153,7 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CodingContest.h" />
+    <ClInclude Include="CodingContestBase.h" />
     <ClInclude Include="CommonIncludes.h" />
     <ClInclude Include="InputOutput.h" />
   </ItemGroup>
