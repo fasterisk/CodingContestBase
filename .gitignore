@@ -46,6 +46,7 @@
 *.ipdb
 *.db-shm
 *.db-wal
+*.vs
 
 # contest files
 level*
