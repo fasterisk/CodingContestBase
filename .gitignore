@@ -47,6 +47,7 @@
 *.db-shm
 *.db-wal
 *.vs
+*.FileListAbsolute.txt
 
 # contest files
 level*
