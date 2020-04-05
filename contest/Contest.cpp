@@ -17,8 +17,6 @@ void writeOutput(ostream & output, const InputObject & o)
 	// todo
 }
 
-double pi() { return atan(1) * 4; } 
-
 /***********************************************************************************
 ************************************************************************************/
 void Contest::Run(istream & input, ostream & output)

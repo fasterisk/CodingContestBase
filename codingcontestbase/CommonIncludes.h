@@ -11,6 +11,7 @@
 #include <cmath>
 #include <iterator>
 #include <iomanip>
+#include <numeric>
 
 using namespace std;
 
@@ -37,7 +38,11 @@ using MSI = map<string, int>;
 constexpr int MAXINT = std::numeric_limits<int>::max();
 constexpr int MININT = -MAXINT;
 
-double pi() { return atan(1) * 4; }
+template <typename T>
+inline T pi()
+{
+	return atan(1) * static_cast<T>(4);
+}
 
 template <typename T, typename U>
 inline void amin(T & x, U y)
