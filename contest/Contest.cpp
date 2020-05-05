@@ -2,26 +2,26 @@
 
 struct InputObject
 {
-	int i1 = 0;
-	int i2 = 0;
+	// todo
 };
 
-ofstream &operator <<(ofstream & output, const InputObject & o)
-{
-	return output;
+InputObject readInput(istream & input)
+{ 
+	InputObject o;
+	// todo
+	return o;
 }
 
-ifstream &operator >> (ifstream & input, InputObject & i)
+void writeOutput(ostream & output, const InputObject & o) 
 {
-	input >> i.i1;
-	input >> i.i2;
-	return input;
+	// todo
 }
 
 /***********************************************************************************
 ************************************************************************************/
-void Contest::Run(std::ifstream & input, std::ofstream & output)
+void Contest::Run(istream & input, ostream & output)
 {
-	InputObject inputobject;
-	input >> inputobject;
+	auto in = readInput(input);
+	output << setprecision(20);
+	writeOutput(output, in);
 }

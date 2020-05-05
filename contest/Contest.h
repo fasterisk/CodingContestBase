@@ -2,8 +2,7 @@
 
 #include "CodingContestBase.h"
 
-class Contest
+namespace Contest
 {
-public:
-	void Run(std::ifstream & input, std::ofstream & output);
-};
+void Run(istream & input, ostream & output);
+} // namespace Contest

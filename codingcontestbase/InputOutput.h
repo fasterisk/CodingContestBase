@@ -14,7 +14,7 @@ using namespace std;
 namespace io
 {
 	template<typename T>
-	inline void readVector(ifstream & input, int iNum, vector<T> & rVector)
+	inline void readVector(istream & input, int iNum, vector<T> & rVector)
 	{
 		for (int i = 0; i < iNum; ++i)
 		{
@@ -26,7 +26,7 @@ namespace io
 	}
 
 	template<typename T>
-	inline void readSet(ifstream & input, int iNum, set<T> & rSet)
+	inline void readSet(istream & input, int iNum, set<T> & rSet)
 	{
 		for (int i = 0; i < iNum; ++i)
 		{
@@ -38,7 +38,7 @@ namespace io
 	}
 
 	template<typename T1, typename T2>
-	inline void readMap(ifstream & input, int iNum, map<T1, T2> & rMap)
+	inline void readMap(istream & input, int iNum, map<T1, T2> & rMap)
 	{
 		for (int i = 0; i < iNum; ++i)
 		{
@@ -51,9 +51,9 @@ namespace io
 		}
 	}
 
-	inline void goToNextLine(ifstream & input)
+	inline void goToNextLine(istream & input)
 	{
-		char nextChar;
+		char nextChar = 0;
 		while (input.get(nextChar))
 		{
 			if (nextChar == '\n')
@@ -62,14 +62,14 @@ namespace io
 			}
 		}
 	}
-};
+}  // namespace io
 
 ////////////////////////////////////////////////////////////////////
 ///				Operators
 ////////////////////////////////////////////////////////////////////
 
 template<typename T1, typename T2>
-inline ofstream& operator << (ofstream & output, const pair<T1, T2>& p)
+inline ostream& operator << (ostream & output, const pair<T1, T2>& p)
 {
 	output << p.first << " " << p.second;
 
@@ -77,7 +77,7 @@ inline ofstream& operator << (ofstream & output, const pair<T1, T2>& p)
 }
 
 template<typename T1, typename T2>
-inline ifstream& operator >> (ifstream & input, pair<T1, T2>& p)
+inline istream& operator >> (istream & input, pair<T1, T2>& p)
 {
 	input >> p.first;
 	input >> p.second;
@@ -86,7 +86,7 @@ inline ifstream& operator >> (ifstream & input, pair<T1, T2>& p)
 }
 
 template<typename T>
-inline ofstream &operator <<(ofstream & output, const vector<T> & rVector)
+inline ostream &operator <<(ostream & output, const vector<T> & rVector)
 {
 	bool bFirst = true;
 	for (auto & item : rVector)
@@ -103,7 +103,7 @@ inline ofstream &operator <<(ofstream & output, const vector<T> & rVector)
 }
 
 template<typename T>
-inline ofstream &operator <<(ofstream & output, const set<T> & rSet)
+inline ostream &operator <<(ostream & output, const set<T> & rSet)
 {
 	bool bFirst = true;
 	for (auto & item : rSet)
@@ -120,7 +120,7 @@ inline ofstream &operator <<(ofstream & output, const set<T> & rSet)
 }
 
 template<typename T1, typename T2>
-inline ofstream &operator <<(ofstream & output, const map<T1, T2> & rMap)
+inline ostream &operator <<(ostream & output, const map<T1, T2> & rMap)
 {
 	bool bFirst = true;
 	for (auto & iter : rMap)
