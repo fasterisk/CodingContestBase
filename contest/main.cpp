@@ -1,10 +1,15 @@
 #include "CodingContestBase.h"
 #include "Contest.h"
 
+#define AOC
+//#define CCC
 
 static constexpr const string_view FOLDER_PREFIX = "level";
 static constexpr const unsigned int LEVEL_NUMBER = 1;
+
+#ifdef CCC
 static constexpr const unsigned int NUM_TEST_LEVELS = 1;
+#endif
 
 void doLevel(const string & inFileName, const string & outFileName) {
 	cout << "Input File: " << inFileName << endl;
@@ -30,6 +35,15 @@ int main()
 {
 	try
 	{
+		#ifdef AOC
+		ostringstream exampleInput;
+		ostringstream exampleOutput;
+		exampleInput << FOLDER_PREFIX << LEVEL_NUMBER << "/input.txt";
+		exampleOutput << FOLDER_PREFIX << LEVEL_NUMBER << "/output.txt";
+
+		#endif
+
+		#ifdef CCC
 		ostringstream exampleInput;
 		ostringstream exampleOutput;
 		exampleInput << FOLDER_PREFIX << LEVEL_NUMBER << "/" << FOLDER_PREFIX << LEVEL_NUMBER
@@ -50,6 +64,7 @@ int main()
 
 			doLevel(ssInputFileName.str(), ssOutputFileName.str());
 		}
+		#endif
 	}
 	catch (...)
 	{
