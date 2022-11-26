@@ -4,7 +4,7 @@
 
 static constexpr const string_view FOLDER_PREFIX = "level";
 static constexpr const unsigned int LEVEL_NUMBER = 1;
-static constexpr const unsigned int NUM_TEST_LEVELS = 5;
+static constexpr const unsigned int NUM_TEST_LEVELS = 1;
 
 void doLevel(const string & inFileName, const string & outFileName) {
 	cout << "Input File: " << inFileName << endl;
@@ -33,9 +33,9 @@ int main()
 		ostringstream exampleInput;
 		ostringstream exampleOutput;
 		exampleInput << FOLDER_PREFIX << LEVEL_NUMBER << "/" << FOLDER_PREFIX << LEVEL_NUMBER
-		                << "_example.in";
+		                << "_input.txt";
 		exampleOutput << FOLDER_PREFIX << LEVEL_NUMBER << "/" << FOLDER_PREFIX << LEVEL_NUMBER
-		                 << "_example_my.txt";
+		                 << "_output.txt";
 
 		doLevel(exampleInput.str(), exampleOutput.str());
 
@@ -44,7 +44,7 @@ int main()
 			ostringstream ssInputFileName;
 			ostringstream ssOutputFileName;
 			ssInputFileName << FOLDER_PREFIX << LEVEL_NUMBER << "/" << FOLDER_PREFIX << LEVEL_NUMBER
-			                << "_" << nLevelFile << ".in";
+			                << "_" << nLevelFile << "_input.txt";
 			ssOutputFileName << FOLDER_PREFIX << LEVEL_NUMBER << "/" << FOLDER_PREFIX
 			                 << LEVEL_NUMBER << "_" << nLevelFile << "_output.txt";
 
